@@ -120,8 +120,9 @@ ul,ol{margin:0;padding:0;list-style:none}
 .practice-card p{color:var(--green-2);margin-bottom:18px}
 .practice-card .text-link{margin-top:auto;align-self:flex-start}
 .other-services{margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
-.service-list{display:flex;flex-wrap:wrap;gap:10px}
-.service-list li{padding:8px 16px;border:1px solid var(--line);font-size:14px;color:var(--ink)}
+.service-list{display:grid;grid-template-columns:1fr;column-gap:32px}
+.service-list li{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink)}
+.service-list li::before{content:"";flex:0 0 auto;width:6px;height:6px;border-radius:50%;background:var(--gold)}
 
 /* Problemas */
 .problems{background:var(--cream-2)}
@@ -202,6 +203,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   .hero::before{background:linear-gradient(90deg,rgba(14,28,22,.94) 0%,rgba(22,42,34,.84) 55%,rgba(22,42,34,.4) 100%)}
   .hero-orbit{display:block}
   .practice-grid{grid-template-columns:repeat(2,1fr)}
+  .service-list{grid-template-columns:repeat(2,1fr)}
   .problem-grid{grid-template-columns:repeat(2,1fr)}
   .pillar-grid{grid-template-columns:repeat(2,1fr)}
   .zones-inner{grid-template-columns:1.3fr 1fr}
@@ -222,8 +224,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   .main-nav .nav-cta:hover{background:var(--gold);color:var(--green)}
   .about-grid{grid-template-columns:1fr 1.1fr;gap:clamp(48px,7vw,110px)}
   .practice-grid{grid-template-columns:repeat(3,1fr);gap:32px}
-  .other-services{display:flex;align-items:center;gap:32px}
-  .other-services .eyebrow{margin:0;white-space:nowrap}
+  .service-list{grid-template-columns:repeat(3,1fr)}}
   .pillar-grid{grid-template-columns:repeat(4,1fr);gap:32px}
   .process-grid{grid-template-columns:.8fr 2fr;gap:6vw;align-items:start}
   .steps{grid-template-columns:repeat(4,1fr);gap:24px;padding:28px 0 0;border-left:0;border-top:1px solid var(--line-dark)}
